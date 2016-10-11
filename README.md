@@ -4,8 +4,6 @@ This repository aims start a collaboration among geospatial software developers 
 
 The collaboration is rooted in open source principles and tools, but focused on the creation of open standards. Open Source implementations are encouraged but by no means required. Anyone is welcome to participate, but must back up 'ideas' with working code. Our goal is to be a collaboration of developers, not [architecture astronauts](http://www.joelonsoftware.com/articles/fog0000000018.html). 
 
-A large hat tip goes to the group that built [GeoJSON](http://geojson.org) - [Hobu](https://github.com/hobu), Martin, Allan, [Sean](https://github.com/sgillies), [Tim](https://github.com/tschaub) and [Chris](https://github.com/crschmidt) set a great example of how to build an open geospatial specification that understands the complexity of the geospatial domain while keeping the specification simple and implementable. 
-
 ## In this repo
 
 This repository contains the core [Principles](principles.md) that govern the collaboration. It also contains a [roadmap](roadmap.md) for the core specifications, as well as a [doc of ideas](roadmap-next.md) of what pieces will likely come next if the core is successful. 
@@ -28,4 +26,9 @@ Please review and edit to improve this repository through pull requests. If you 
 Chris Holmes [@cholmes](https://github.com/cholmes)
 (add your name when you contribute)
 
+## Inspirations
+
+* A large hat tip goes to the group that built [GeoJSON](http://geojson.org) - [Hobu](https://github.com/hobu), Martin, Allan, [Sean](https://github.com/sgillies), [Tim](https://github.com/tschaub) and [Chris](https://github.com/crschmidt) set a great example of how to build an open geospatial specification that understands the complexity of the geospatial domain while keeping the specification simple and implementable. 
+* [GeoPackage](http://geopackage.org) was also a great collaboration that kept the core relatively tight, and has shown how to use github well to create and improve geospatial standards in an OGC context. 
+* [Tom McWright](http://www.macwright.org/) and the [MapBox](http://mapbox.com) crew, for setting the standard of clear, simple geospatial specifications. And for doing the very needed work of explaining specs and geospatial concepts in ways that anyone can understand.
 
