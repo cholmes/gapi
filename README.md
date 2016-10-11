@@ -1,3 +1,5 @@
+## About
+
 This repository aims start a collaboration among geospatial software developers to establish a core set of RESTful JSON-based standards to share geospatial information online. At the core it is an update or refactoring of the core ideas of the venerable OGC W\*S standards, taking the core concepts but starting over in a way that is in line with what modern developers expect from their standards.
 
 The collaboration is rooted in open source principles and tools, but focused on the creation of open standards. Open Source implementations are encouraged but by no means required. Anyone is welcome to participate, but must back up 'ideas' with working code. Our goal is to be a collaboration of developers, not [architecture astronauts](http://www.joelonsoftware.com/articles/fog0000000018.html). 
