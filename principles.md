@@ -16,7 +16,7 @@ This project will be governed by a set of informal core principles. These princi
 
 ## Resources
 
-Open Source Principles - [Producing Open Source Software](http://producingoss.org) by Karl Fogel.
-Best Practices JSON API Design - [JSON API](http://jsonapi.org/) best practices for making API's with JSON
-Pragmatic REST - [Web API Design: Crafting interfaces that developers love](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
-Open API Initiative - [OpenAPIs.org](https://openapis.org/)
+* Open Source Principles - [Producing Open Source Software](http://producingoss.org) by Karl Fogel.
+* Best Practices JSON API Design - [JSON API](http://jsonapi.org/) best practices for making API's with JSON
+* Pragmatic REST - [Web API Design: Crafting interfaces that developers love](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+* Open API Initiative - [OpenAPIs.org](https://openapis.org/)
