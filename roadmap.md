@@ -29,12 +29,50 @@ These are a set of small API pieces that should be combined to build the core sp
 **Reprojection** - How to respond to requests in different projections, and return data in a requested projection
 
 
-## Profiles / extensions
+## Profiles
 
 These are extensions to the core that enable more specific functionality.
 
 **Imagery Catalog Profile** - An API to search large imagery holdings, with set core shared schema. Likely quite similar to https://www.planet.com/api-explorer/ 
 
-**Layer Catalog Profile** - CSW updated for REST+JSON, built on core feature server. The core metadata fields should be possible to add on to the core feature server.
+**Layer Catalog Profile** - CSW updated for REST+JSON, built on core feature server. The core metadata fields should be possible to add on to the core feature server. Ideally there's a simple flat feature response with like core dublin metadata, but it would enable more complex responses if needed.
 
 **Domain Specific Profile** - Attempt to represent a domain specific GML profile as a feature server.
+
+## Next Feature Extensions
+
+**Notifications/Events** - Mechanism to get updates on changes on a core server, so client does not have to poll for updates. 
+
+**Syncing** Use the notification mechanism to do server to server syncing, with provenance tracking. A server that is the canonical source of data should be able to recieve a 'pingback' so it also knows where/how its data is being used.
+
+**Generalization / Simplification** - Way to specify a zoom level or simplification amount to a feature server and get a geometry that is the right complexity for the zoom level.
+
+**Feature Transactions** - Enable CRUD (creation, updates and deletion) of fields and geometries on a Features Server.
+
+**Static Services** - Create profiles for 'stupid' ways to just put data up on a cloud storage bucket or totally non-geo software (like CMS, etc) that can easily be crawled by other more advanced services. Likely a json sidecar file on each image or vector dataset, with a 'table of contents' that tells a service how to crawl it.
+
+**Feature Statistics / Aggregation** - Queries to feature service may require more complex backend, for interesting statistics. Get counts, or bucketed counts (tell me the number of 'severe fires' for each month in the past 5 years) that can drive graphs, etc.
+
+**Geometry Statistics / Aggregation** - Queries to feature services that give results of aggregated geometries (in heatmap, etc) on a regular grid. Perhaps include Torque type output (or do that in its own).
+
+**Versioning** - Keep track of previous versions of features that have had transactions.
+
+## Next Pixel Extensions
+
+**Tileless responses** - Return the frame requested by the client instead of a regular tile grid. Some use cases will perform better this way. Tiles should be the core, and all should be able to respond by that grid. But streaming may work better if it's not trying to tile everything. Should also be useful for static image serving.
+
+**Multi-band responses** - Should have ways to return data in multi-band formats (like geotiff or MRF), and to let users choose exactly which bands they want. 
+
+**Clipping Responses** - Like a tileless response, but cut data to exactly the shape a client wants. May work very similarly, where tileless just gives a box and clipping can give a geometry. Should also be able to clip along with multi-band selection.
+
+**Multi-dimensional querying** - Server representations for NetCDF and GRIB type multidimensional data. Look in to something like [xarray](https://github.com/pydata/xarray) interface
+
+**Video / streaming** - Any needed extensions for high frame rate data, and to get real performance from sending data to the client. May want to investigate web workers.
+
+**Data Tiles** - Provide way to map multi-band data to 3-band tile sets, and enable client side manipulation of algorithms in Canvas. See [Planet Ag demo](https://demo.planet.com/ag/ag-indices/) for an example.
+
+**Image Operations** - Provide server side processing of images for certain optimizations before returning to the client. Should be fully compatible with 'processing' capabilities. See [ModelLab](https://www.azavea.com/projects/modellab/) and Esri's image server for inspiration.
+
+## Beyond
+
+Explore things like styling (CartoCSS?), on the fly styling (pull data from an online source and render), optimized formats like protobuf, and how vector tiles fit in to the picture.
